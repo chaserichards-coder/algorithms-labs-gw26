@@ -39,5 +39,5 @@ if __name__ == "__main__":
             continue
         start = time.perf_counter()
         result = fibonacci(int(text))
-git        end = time.perf_counter()
+        end = time.perf_counter()
         print(f"fibonacci_threeway({int(text)}) = {result}, calculating this took {end - start:.4e} seconds.")
