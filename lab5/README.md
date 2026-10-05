@@ -98,15 +98,26 @@ have a different height, creating imbalances higher up.
 
 **TODO 1.1:** Briefly recall the three deletion cases from Lab 3/4:
 - What happens when the target node has 0 children?
+The node is simply removed from the tree since it has no children.
+
 - What happens when the target node has 1 child?
+The node is removed, and its single child is connected directly to the node's parent, bypassing the deleted node.
+
 - What happens when the target node has 2 children, and why is the in-order successor used?
+The in-order successor (the smallest node in the right subtree) is used to replace the target node because it preserves the binary search tree property. After replacing, the in-order successor is removed from its original position.
+
 
 ### 1.2 Short answer: Height change after deletion
 
 **TODO 1.2:** When you delete a leaf node from an AVL tree:
 - Does the leaf's parent's height change? By how much?
+Yes, the parent's height decreases by 1 if the deleted leaf was the only child contributing to its height.
 - Can the grandparent's height change?
+Yes, the grandparent's height can change if the parent's height decreases and causes an imbalance.
 - Can the imbalance propagate to the root?
+Yes, the imbalance can propagate up to the root if rebalancing is required at multiple levels.
+
+
 
 ---
 
